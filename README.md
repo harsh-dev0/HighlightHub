@@ -1,36 +1,57 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# SnapShorts🎬
 
-## Getting Started
+🎬 Turn long videos or scripts into viral TikToks & Reels in seconds using AI.
 
-First, run the development server:
+---
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+🧠 Built on the Script2Shorts engine:
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+- Summarize scripts/transcripts
+- Generate voiceover
+- Add background music
+- Auto-edit visuals
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+A tool to turn long-form video scripts or YouTube links into short, AI-generated teaser videos with auto-edited clips, voiceover, and background music.
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+---
 
-## Learn More
+## 💡 Idea
 
-To learn more about Next.js, take a look at the following resources:
+Many creators struggle to repurpose long videos into engaging short content.  
+Script2Shorts solves that by taking in a script (or transcript) and automatically creating a 30-second video summary with:
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+- AI summarization
+- Voiceover generation
+- Background music
+- Auto-edited visuals (Remotion or ffmpeg.wasm)
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+---
 
-## Deploy on Vercel
+## 🔧 Planned Tech Stack
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+- `Next.js` + `TailwindCSS`
+- `Remotion` or `ffmpeg.wasm`
+- `OpenAI` (for summarization)
+- `ElevenLabs` (for voiceover)
+- `Supabase` (for auth + storage)
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+---
+
+## 🚀 Goal(s)
+
+- Ship a working MVP by **15 April**
+- Document full build journey on **YouTube and Twitter**
+
+---
+
+## 🛠️ Devlog (Build Journal)
+
+### Day 1
+
+- Created project structure
+- Wrote first console log (`"we are so back"`)
+- Drafted this README
+
+<!-- You’ll keep adding logs like this under the devlog section day-wise -->
+
+---
