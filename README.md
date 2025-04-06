@@ -52,6 +52,12 @@ Script2Shorts solves that by taking in a script (or transcript) and automaticall
 - Wrote first console log (`"we are so back"`)
 - Drafted this README
 
-<!-- You’ll keep adding logs like this under the devlog section day-wise -->
+### Day 2
+
+- Made landing Page
+- Learned more about lazy loading
+- And also built Shimmer UI
+- Night is still young buddy
+<!-- I’ll keep adding logs like this under the devlog section day-wise -->
 
 ---

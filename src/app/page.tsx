@@ -1,9 +1,5 @@
-"use client"
-import { useEffect } from "react"
+import HeroSection from "@/components/HeroSection"
 
 export default function Home() {
-  useEffect(() => {
-    console.log("WE ARE SO BACK")
-  }, [])
-  return <div className="text-2xl p-10">Script2Shorts: Coming Soon</div>
+  return <HeroSection />
 }
