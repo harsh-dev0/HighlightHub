@@ -58,6 +58,12 @@ Script2Shorts solves that by taking in a script (or transcript) and automaticall
 - Learned more about lazy loading
 - And also built Shimmer UI
 - Night is still young buddy
+- Set up basic working MVP for /api/summarize route.
+- Integrated youtube-transcript to fetch video transcript from URL.
+- Connected Groq API (mixtral-8x7b) to generate a 30s teaser summary script.
+- Added support for user-provided transcripts and merged with fetched one.
+- Faced Groq 413 error due to token limit (6K TPM) — need to chunk/trim input next.
+- API tested end-to-end, UI wired to submit data and show result.
 <!-- I’ll keep adding logs like this under the devlog section day-wise -->
 
 ---
