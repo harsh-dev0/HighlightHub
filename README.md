@@ -1,46 +1,56 @@
-# SnapShorts🎬
+# HighlightHub 📍
 
-🎬 Turn long videos or scripts into viral TikToks & Reels in seconds using AI.
-
----
-
-🧠 Built on the Script2Shorts engine:
-
-- Summarize scripts/transcripts
-- Generate voiceover
-- Add background music
-- Auto-edit visuals
-
-A tool to turn long-form video scripts or YouTube links into short, AI-generated teaser videos with auto-edited clips, voiceover, and background music.
+🎥 **Summarize YouTube videos and highlight key moments with AI.**
 
 ---
 
-## 💡 Idea
+🧠 **Powered by HighlightHub Engine:**
 
-Many creators struggle to repurpose long videos into engaging short content.  
-Script2Shorts solves that by taking in a script (or transcript) and automatically creating a 30-second video summary with:
+- Fetches YouTube video transcripts
+- Summarizes full video into clear takeaways
+- Extracts eventful, highlight-worthy timestamps
+- Outputs structured JSON with `{ start, duration, text }`
+- (Coming Soon) Optional preview + download of video clips
 
-- AI summarization
-- Voiceover generation
-- Background music
-- Auto-edited visuals (Remotion or ffmpeg.wasm)
-
----
-
-## 🔧 Planned Tech Stack
-
-- `Next.js` + `TailwindCSS`
-- `Remotion` or `ffmpeg.wasm`
-- `OpenAI` (for summarization)
-- `ElevenLabs` (for voiceover)
-- `Supabase` (for auth + storage)
+HighlightHub helps you quickly turn long YouTube videos into structured insights and actionable short-form segments — ideal for content creators, editors, and learners.
 
 ---
 
-## 🚀 Goal(s)
+## 💡 The Problem
 
-- Ship a working MVP by **15 April**
-- Document full build journey on **YouTube and Twitter**
+Long-form videos often bury **golden moments** deep inside.  
+Manually watching and scrubbing for highlights is time-consuming.
+
+---
+
+## ✅ The Solution
+
+**HighlightHub** analyzes video transcripts and gives you:
+
+- A **coherent summary** of the full video
+- A set of **highlight timestamps** (e.g., funniest, most insightful, most emotional, etc.)
+- Perfect for making Shorts, Reels, or just skimming valuable moments
+
+---
+
+## ⚙️ Features
+
+- 🔗 Input: Paste any YouTube video link
+- 🧠 AI Summary: High-level overview of what the video is about
+- ⏱️ Highlight Timestamps: Detect 30–60s clip-worthy segments
+- 🧾 Output: Clean structured JSON (can be used in editing tools or automated clip makers)
+- 🧰 (Optional) Download-ready metadata for editors
+- 📥 (Coming Soon) Export short clips directly using ffmpeg/remotion
+
+---
+
+## 🧱 Tech Stack
+
+- `Next.js` + `TailwindCSS` – Frontend
+- `Node.js` – Backend processing
+- `youtube-transcript` – Transcript extraction
+- `Groq (meta-llama/llama-4-scout-17b-16e-instruct)` or `OpenAI` – Summarization
+- `ffmpeg.wasm` or `Remotion` (optional) – Clip previews
 
 ---
 
@@ -54,16 +64,24 @@ Script2Shorts solves that by taking in a script (or transcript) and automaticall
 
 ### Day 2
 
-- Made landing Page
-- Learned more about lazy loading
-- And also built Shimmer UI
-- Night is still young buddy
-- Set up basic working MVP for /api/summarize route.
-- Integrated youtube-transcript to fetch video transcript from URL.
-- Connected Groq API (mixtral-8x7b) to generate a 30s teaser summary script.
-- Added support for user-provided transcripts and merged with fetched one.
-- Faced Groq 413 error due to token limit (6K TPM) — need to chunk/trim input next.
-- API tested end-to-end, UI wired to submit data and show result.
-<!-- I’ll keep adding logs like this under the devlog section day-wise -->
+- Built landing page
+- Learned about lazy loading + Shimmer UI
+- Built basic `/api/summarize` route
+- Integrated `youtube-transcript` to fetch transcript from video
+- Connected to Groq API (`meta-llama/llama-4-scout-17b-16e-instruct`) to generate a 30s teaser summary
+- Added support for both user and auto transcript merging
+- Faced Groq 413 error due to token limits (6K TPM) — chunking needed next
+
+### Day 3
+
+- Changed the entire product direction to **highlight timestamp generation**
+- Full video rendering with voiceover was **too time-consuming** and **API-heavy**
+- EleventLabs + OpenAI combo required subscriptions and would block free MVP
+- This new direction gives faster output, better dev velocity
+- Refactored API to return a list of highlight objects with `{start, duration, text}`
+- Will add JSON download and optional UI to preview or edit highlights next
+- Might experiment with direct ffmpeg-based clip cutting using those timestamps
 
 ---
+
+More logs coming soon...
