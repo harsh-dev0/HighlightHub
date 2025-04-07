@@ -148,7 +148,7 @@ export async function POST(req: NextRequest) {
     
     // Step 4: Extract meta data and highlights
     let highlights: Highlight[] = [];
-    let meta = {
+    const meta = {
       vibe: '',
       musicStyle: '',
       visualStyle: '',
@@ -240,7 +240,7 @@ export async function POST(req: NextRequest) {
     
   } catch (error) {
     console.error('Main process error:', error);
-    {/*@ts-expect-error*/ }
+    {/*@ts-expect-error – reason: [add something generic if needed]*/ }
     return NextResponse.json({ error: 'Failed to process request.', details: error.message }, { status: 500 });
   }
 }
@@ -252,7 +252,7 @@ export async function POST(req: NextRequest) {
 //   }
 //   return chunks;
 // }
-
+// eslint-disable-next-line @typescript-eslint/no-explicit-any
 function chunkTranscript(lines: any, maxCharLength: number) {
   const chunks = [];
   let current = [];
