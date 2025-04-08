@@ -1,5 +1,4 @@
 import { NextRequest, NextResponse } from 'next/server'
-import { fetchTranscript } from '@/lib/getTranscript'
 import Groq from 'groq-sdk'
 // import { exec } from 'child_process'
 // import { promisify } from 'util'

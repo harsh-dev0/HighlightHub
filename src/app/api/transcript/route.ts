@@ -17,7 +17,9 @@ export async function POST(req: Request) {
     }));
 
     return NextResponse.json({ transcript: mappedTranscript });
-  } catch (err: any) {
+  } 
+  // eslint-disable-next-line @typescript-eslint/no-explicit-any
+    catch (err: any) {
     return NextResponse.json({ error: err.message || 'Failed to fetch transcript' }, { status: 500 });
   }
 }
