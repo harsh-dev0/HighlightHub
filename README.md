@@ -97,4 +97,4 @@ Manually watching and scrubbing for highlights is time-consuming.
 
 - While the tool works flawlessly in local dev, YouTube blocks transcript access on production servers for many videos due to bot detection and lack of official API support.
 
-This breaks the core functionality, so I'm pausing this direction and will pivot to something more robust tomorrow. Lesson learned: relying on scraped content from third-party platforms is risky for production apps.
+This breaks the core functionality, so I'm pausing this direction and will pivot to building something more robust product. Lesson learned: relying on scraped content from third-party platforms is risky for production apps.
