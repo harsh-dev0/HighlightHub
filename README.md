@@ -1,3 +1,12 @@
+# Archived-transcript-experiment(you can clone it works in local thoughs)
+
+## Reason for discontinuation
+
+- ❌ didn’t add enough value beyond existing tools (Tactiq, etc.)
+- Youtube Api was messing it up, did used proxy server but hit the wall for deployement, it was not - worth it to pay money for the server,
+- It works in local flawlessly, I know also how to make it work in prod, you can clone in local though to run it locally
+- Learnings were there, we move.
+
 # HighlightHub 📍
 
 🎥 **Summarize YouTube videos and highlight key moments with AI.**

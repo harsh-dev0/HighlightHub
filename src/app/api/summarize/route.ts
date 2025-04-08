@@ -41,21 +41,20 @@ export async function POST(req: NextRequest) {
 
     // // Step 1: Get transcript
     // const transcript = (await fetchTranscript(videoId)).map(t => t.text).join(' ');
-    const res = await fetch('https://highlighthub.vercel.app/api/transcript', {
+    const res = await fetch('http://localhost:3001/transcript', {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',
       },
       body: JSON.stringify({ videoId }),
     });
-    
     const data = await res.json();
     
     if (!res.ok) {
       throw new Error(data.error || 'Failed to fetch transcript');
     }
     
-    const transcriptWithTimestamps = data.transcript;
+    const transcriptWithTimestamps = data;
     
     const timestampChunks = chunkTranscript(transcriptWithTimestamps, 6000)
     const events: string[] = []

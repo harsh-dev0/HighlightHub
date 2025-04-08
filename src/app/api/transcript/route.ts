@@ -18,8 +18,13 @@ export async function POST(req: Request) {
 
     return NextResponse.json({ transcript: mappedTranscript });
   } 
-  // eslint-disable-next-line @typescript-eslint/no-explicit-any
-    catch (err: any) {
-    return NextResponse.json({ error: err.message || 'Failed to fetch transcript' }, { status: 500 });
+  catch (err: unknown) {
+    let message = 'Failed to fetch transcript';
+  
+    if (err instanceof Error) {
+      message = err.message;
+    }
+  
+    return NextResponse.json({ error: message }, { status: 500 });
   }
 }

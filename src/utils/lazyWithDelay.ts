@@ -1,7 +1,6 @@
-import { lazy } from "react";
-// eslint-disable-next-line @typescript-eslint/no-explicit-any
-export function lazyWithDelay<T extends React.ComponentType<any>>(
-  factory: () => Promise<{ default: T }>,
+import { JSX, lazy } from "react";
+export function lazyWithDelay<T extends JSX.IntrinsicAttributes>(
+  factory: () => Promise<{ default: React.ComponentType<T> }>,
   delay: number = 1000
 ) {
   return lazy(() =>
